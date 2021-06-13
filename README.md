@@ -22,3 +22,38 @@ socket() -> connect(): 서버 소켓으로의 연결 요청
 
 <br>
 <br>
+
+## 리눅스 기반 실행🎯
+VMware + Ubuntu를 설치하여 환경 구성.   
+<br>
+
+리눅스에서의 소켓 조작은 파일 조작과 동일하게 간주된다.   
+사용자가 소켓(or 파일) 생성 -> OS는 해당 소켓에 파일 디스크립터 부여   
+파일 디스크립터 : 파일 또는 소켓에 부여된 정수(0,1,2번은 표준에 할당되어있다.)   
+
+1. 파일 열기   
+```C
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+         //path: 파일 이름 문자열의 주소 값
+int open(const char* path, int flag);
+                     //flag: 파일의 오픈 모드 정보
+```
+<br>
+
+2. 파일 닫기   
+```C
+#include <unistd.h>
+         //fd: 소켓의 파일 디스크립터
+int close(int fd);
+```   
+<br>
+
+3. 파일에 데이터 쓰기   
+```C
+#incldue <unistd.h>
+//signed int              //buf: 전송할 데이터가 저장된 버퍼의 주소 값
+ssize_t write(int fd, const void* buf, size_t nbytes);
+                                       //nbytes: 전송할 데이터의 바이트 수
+```   
