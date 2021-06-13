@@ -1,6 +1,6 @@
 # StudyTCP-IP21
 PKNU IoT 개발자 과정   
-TCP/IP Stucdy Repository   
+TCP/IP Stucdy Repository
 <br>
 <br>
 
