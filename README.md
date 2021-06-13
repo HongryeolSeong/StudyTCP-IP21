@@ -114,3 +114,10 @@ int WSAStartup(WORD wVersionRequested, LPWSADATA lpWSAData);
 <br>
 <br>
 
+## 프로토콜🎯
+서로 데이터를 주고 받기(대화) 위해서 정희해 놓은 규약/약속   
+<br>
+
+프로토콜의 체계   
+PF_INET(IPv4), PF_INET6(IPv6), PF_LOCAL(로컬), PF_PACKET(Low Level 소켓), PF_IPX(IPX 노벨)   
+등이 있지만 보편적으로 사용되는 PF_INET를 활용하여 학습한다.
