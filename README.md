@@ -19,7 +19,6 @@ socket() -> connect(): 서버 소켓으로의 연결 요청
 
 해당 코드   
 [server.c](https://github.com/HongryeolSeong/StudyTCP-IP21/blob/main/0611/hello_server.c)   [client.c](https://github.com/HongryeolSeong/StudyTCP-IP21/blob/main/0611/hello_client.c)
-
 <br>
 <br>
 
