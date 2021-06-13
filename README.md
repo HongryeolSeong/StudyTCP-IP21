@@ -78,9 +78,9 @@ ssize_t read(int fd, void* buf, size_t nbytes);
 
 * 파일 디스크립터와 소켓
 해당 코드🎮   
+파일 디스크립터는 0,1,2 이후의 숫자로 순서대로 넘버링 되는 것을 볼 수 있다.   
 [fd_seri.c](https://github.com/HongryeolSeong/StudyTCP-IP21/blob/main/0611/fd_seri.c)   
 ![결과9](https://github.com/HongryeolSeong/StudyC21/blob/main/img/res1.png "2차원배열")   
-파일 디스크립터는 0,1,2 이후의 숫자로 순서대로 넘버링 되는 것을 볼 수 있다.   
 <br>
 <br>
 
