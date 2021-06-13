@@ -76,7 +76,7 @@ ssize_t read(int fd, void* buf, size_t nbytes);
 ![결과9](https://github.com/HongryeolSeong/StudyC21/blob/main/img/res1.png "2차원배열")   
 <br>
 
-###### 파일 디스크립터와 소켓   
+##### 파일 디스크립터와 소켓   
 해당 코드🎮   
 파일 디스크립터는 0,1,2 이후의 숫자로 순서대로 넘버링 되는 것을 볼 수 있다.   
 [fd_seri.c](https://github.com/HongryeolSeong/StudyTCP-IP21/blob/main/0611/fd_seri.c)   
@@ -93,6 +93,7 @@ ssize_t read(int fd, void* buf, size_t nbytes);
 1. winsock2.h 헤더 파일을 포함 할 것
 2. ws2_32.lib 라이브러리를 링크시킬 것
 3. winsock의 초기화가 필요하다   
+<br>
 
 * winsock의 초기화
 윈속 프로그래밍시 반드시 WSAStartup()을 통해 프로그램 요구 윈도우 소켓의 버전을 알리고, 해당 버전 지원 라이브러리의 초기화를 진행해야 한다.   
