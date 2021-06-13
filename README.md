@@ -1,6 +1,6 @@
 # StudyTCP-IP21
 PKNU IoT 개발자 과정   
-TCP/IP Stucdy Repository
+TCP/IP Stucdy Repository   
 <br>
 <br>
 
@@ -112,7 +112,7 @@ int WSAStartup(WORD wVersionRequested, LPWSADATA lpWSAData);
 해당 코드🎮
 [server.c](https://github.com/HongryeolSeong/StudyTCP-IP21/blob/main/0611/hello_server.c)  [client_win.c](https://github.com/HongryeolSeong/StudyTCP-IP21/blob/main/0611/hello_client_win.c)   
 ![결과9](https://github.com/HongryeolSeong/StudyC21/blob/main/img/res1.png "2차원배열")   
-리눅스 서버는 우분투 OS에서, 윈도우 클라이언트는 윈도우 OS cmd를 통해 구동했다.
+리눅스 서버는 우분투 OS에서, 윈도우 클라이언트는 윈도우 OS cmd를 통해 구동했다.   
 <br>
 <br>
 
@@ -156,7 +156,7 @@ TCP의 데이터 경계x 특성을 확인하고자 한다. -> write()와 reade()
 해당 코드🎮
 [server.c](https://github.com/HongryeolSeong/StudyTCP-IP21/blob/main/0611/hello_server.c)  [tcp_client.c](https://github.com/HongryeolSeong/StudyTCP-IP21/blob/main/0611/tcp_client.c)   
 ![결과9](https://github.com/HongryeolSeong/StudyC21/blob/main/img/res1.png "2차원배열")   
-기존의 server + read()호출 횟수를 바꾼 client.c
+기존의 server + read()호출 횟수를 바꾼 client.c   
 <br>
 <br>
 
