@@ -16,8 +16,9 @@ socket(): 소켓 생성 -> bind(): 소켓에 IP와 포트 부여 -> listen(): �
 2. 클라이언트 소켓의 흐름   
 socket() -> connect(): 서버 소켓으로의 연결 요청   
 <br>
+
 해당 코드   
-[server.c](https://github.com/HongryeolSeong/StudyTCP-IP21/blob/main/0611/hello_server.c) [server.c](https://github.com/HongryeolSeong/StudyTCP-IP21/blob/main/0611/hello_client.c)
+[server.c](https://github.com/HongryeolSeong/StudyTCP-IP21/blob/main/0611/hello_server.c "server.c")
 
 <br>
 <br>
