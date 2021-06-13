@@ -122,8 +122,7 @@ int WSAStartup(WORD wVersionRequested, LPWSADATA lpWSAData);
       //1. 프로토콜의 체계        //3. 사용할 프로토콜
 int socket(int domain, int type, int protocol);
                   //2. 소켓의 타입
-```
-<br>
+```   
 
 ##### 프로토콜의 체계
 PF_INET(IPv4), PF_INET6(IPv6), PF_LOCAL(로컬), PF_PACKET(Low Level 소켓), PF_IPX(IPX 노벨)   
