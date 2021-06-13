@@ -10,7 +10,7 @@ HW 연결 + SW 연결이 필요하다.
 1. HW부분은 이미 국내 네트워크가 잘 활성화 되어 있으므로 신경 쓸 필요 없다.
 2. SW부분은 운영체제에서 소켓을 제공하니 이것을 바탕으로 프로그래밍 할 것.   
    
-소켓은 서버(리스닝)소켓 + 클라이언트 소켓으로 나누어진다.   
+##### 소켓은 서버(리스닝)소켓 + 클라이언트 소켓으로 나누어진다.   
 1. 서버 소켓의 흐름   
 socket(): 소켓 생성 -> bind(): 소켓에 IP와 포트 부여 -> listen(): 연결요청 가능한 소켓으로 설정 -> accept(): 연결요청에 대한 수락   
 2. 클라이언트 소켓의 흐름   
@@ -89,14 +89,14 @@ ssize_t read(int fd, void* buf, size_t nbytes);
 클아이언트 프로그램의 경우 윈도우 기반 개발이 대부분이다.   
 <br>
 
-* window 기반 개발시
+##### window 기반 개발시
 1. 리눅스 기반 소켓 함수와 차이(함수 인수의 자료형)가 조금 있음을 알 것
 2. winsock2.h 헤더 파일을 포함 할 것
 3. ws2_32.lib 라이브러리를 링크시킬 것
 4. winsock의 초기화가 필요하다   
 <br>
 
-* winsock의 초기화
+##### winsock의 초기화
 윈속 프로그래밍시 반드시 WSAStartup()을 통해 프로그램 요구 윈도우 소켓의 버전을 알리고, 해당 버전 지원 라이브러리의 초기화를 진행해야 한다.   
 ```C
 #include <winsock2.h>
@@ -117,7 +117,17 @@ int WSAStartup(WORD wVersionRequested, LPWSADATA lpWSAData);
 ## 프로토콜🎯
 서로 데이터를 주고 받기(대화) 위해서 정희해 놓은 규약/약속   
 <br>
+```C
+#include <sys/socket.h>
+      //1. 프로토콜의 체계        //3. 사용할 프로토콜
+int socket(int domain, int type, int protocol);
+                  //2. 소켓의 타입
+```
+<br>
 
-프로토콜의 체계   
+##### 프로토콜의 체계
 PF_INET(IPv4), PF_INET6(IPv6), PF_LOCAL(로컬), PF_PACKET(Low Level 소켓), PF_IPX(IPX 노벨)   
 등이 있지만 보편적으로 사용되는 PF_INET를 활용하여 학습한다.
+<br>
+
+##### 소켓의 타입
