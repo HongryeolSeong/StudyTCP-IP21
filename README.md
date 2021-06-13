@@ -58,17 +58,49 @@ ssize_t write(int fd, const void* buf, size_t nbytes);
                                        //nbytes: 전송할 데이터의 바이트 수
 ```   
 
-해당 코드🎮
-[low_open.c](https://github.com/HongryeolSeong/StudyTCP-IP21/blob/main/0611/low_open.c)   
-![결과9](https://github.com/HongryeolSeong/StudyC21/blob/main/img/res1.png "2차원배열")   
-<br>
-
-[low_open.c](https://github.com/HongryeolSeong/StudyTCP-IP21/blob/main/0611/low_open.c)   
-![결과9](https://github.com/HongryeolSeong/StudyC21/blob/main/img/res1.png "2차원배열")   
-<br>
-
+해당 코드🎮   
 [low_open.c](https://github.com/HongryeolSeong/StudyTCP-IP21/blob/main/0611/low_open.c)   
 ![결과9](https://github.com/HongryeolSeong/StudyC21/blob/main/img/res1.png "2차원배열")   
 <br>
 
 * 파일에 저장된 데이터 읽기
+
+```C
+#include <unistd.h>
+
+ssize_t read(int fd, void* buf, size_t nbytes);
+```   
+
+해당 코드🎮   
+[low_read.c](https://github.com/HongryeolSeong/StudyTCP-IP21/blob/main/0611/low_read.c)   
+![결과9](https://github.com/HongryeolSeong/StudyC21/blob/main/img/res1.png "2차원배열")   
+<br>
+
+* 파일 디스크립터와 소켓
+해당 코드🎮   
+[fd_seri.c](https://github.com/HongryeolSeong/StudyTCP-IP21/blob/main/0611/fd_seri.c)   
+![결과9](https://github.com/HongryeolSeong/StudyC21/blob/main/img/res1.png "2차원배열")   
+파일 디스크립터는 0,1,2 이후의 숫자로 순서대로 넘버링 되는 것을 볼 수 있다.   
+<br>
+<br>
+
+## 윈도우 기반 실행🎯
+상당수의 서버가 리눅스 기반으로 개발되는 동시에   
+클아이언트 프로그램의 경우 윈도우 기반 개발이 대부분이다.   
+<br>
+
+* window 기반 개발시
+1. winsock2.h 헤더 파일을 포함 할 것
+2. ws2_32.lib 라이브러리를 링크시킬 것
+3. winsock의 초기화가 필요하다   
+
+* winsock의 초기화
+윈속 프로그래밍시 반드시 WSAStartup()을 통해 프로그램 요구 윈도우 소켓의 버전을 알리고, 해당 버전 지원 라이브러리의 초기화를 진행해야 한다.   
+```C
+#include <winsock2.h>
+         //wVersionRequested: 윈속 버전 정보
+int WSAStartup(WORD wVersionRequested, LPWSADATA lpWSAData);
+                                    //lpWSAData: WSADATA라는 구조체 변수의 주소 값
+```   
+<br>
+
