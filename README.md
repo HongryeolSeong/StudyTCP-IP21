@@ -90,9 +90,10 @@ ssize_t read(int fd, void* buf, size_t nbytes);
 <br>
 
 * window 기반 개발시
-1. winsock2.h 헤더 파일을 포함 할 것
-2. ws2_32.lib 라이브러리를 링크시킬 것
-3. winsock의 초기화가 필요하다   
+1. 리눅스 기반 소켓 함수와 차이(함수 인수의 자료형)가 조금 있음을 알 것
+2. winsock2.h 헤더 파일을 포함 할 것
+3. ws2_32.lib 라이브러리를 링크시킬 것
+4. winsock의 초기화가 필요하다   
 <br>
 
 * winsock의 초기화
@@ -103,5 +104,13 @@ ssize_t read(int fd, void* buf, size_t nbytes);
 int WSAStartup(WORD wVersionRequested, LPWSADATA lpWSAData);
                                     //lpWSAData: WSADATA라는 구조체 변수의 주소 값
 ```   
+<br>
+
+##### 리눅스 서버 + 윈도우 클라이언트
+해당 코드🎮
+[server.c](https://github.com/HongryeolSeong/StudyTCP-IP21/blob/main/0611/hello_server.c)  [client_win.c](https://github.com/HongryeolSeong/StudyTCP-IP21/blob/main/0611/hello_client_win.c)   
+![결과9](https://github.com/HongryeolSeong/StudyC21/blob/main/img/res1.png "2차원배열")   
+리눅스 서버는 우분투 OS에서, 윈도우 클라이언트는 윈도우 OS cmd를 통해 구동했다.
+<br>
 <br>
 
