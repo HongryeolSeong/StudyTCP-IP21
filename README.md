@@ -17,7 +17,7 @@ socket(): 소켓 생성 -> bind(): 소켓에 IP와 포트 부여 -> listen(): �
 socket() -> connect(): 서버 소켓으로의 연결 요청   
 <br>
 
-해당 코드   
+해당 코드🎮
 [server.c](https://github.com/HongryeolSeong/StudyTCP-IP21/blob/main/0611/hello_server.c)   [client.c](https://github.com/HongryeolSeong/StudyTCP-IP21/blob/main/0611/hello_client.c)
 <br>
 <br>
@@ -28,6 +28,8 @@ VMware + Ubuntu를 설치하여 환경 구성.
 리눅스에서의 소켓 조작은 파일 조작과 동일하게 간주된다.   
 사용자가 소켓(or 파일) 생성 -> OS는 해당 소켓에 파일 디스크립터 부여   
 파일 디스크립터 : 파일 또는 소켓에 부여된 정수(0,1,2번은 표준에 할당되어있다.)   
+
+* 파일에 데이터 쓰기   
 
 1. 파일 열기   
 ```C
@@ -55,3 +57,18 @@ int close(int fd);
 ssize_t write(int fd, const void* buf, size_t nbytes);
                                        //nbytes: 전송할 데이터의 바이트 수
 ```   
+
+해당 코드🎮
+[low_open.c](https://github.com/HongryeolSeong/StudyTCP-IP21/blob/main/0611/low_open.c)   
+![결과9](https://github.com/HongryeolSeong/StudyC21/blob/main/img/res1.png "2차원배열")   
+<br>
+
+[low_open.c](https://github.com/HongryeolSeong/StudyTCP-IP21/blob/main/0611/low_open.c)   
+![결과9](https://github.com/HongryeolSeong/StudyC21/blob/main/img/res1.png "2차원배열")   
+<br>
+
+[low_open.c](https://github.com/HongryeolSeong/StudyTCP-IP21/blob/main/0611/low_open.c)   
+![결과9](https://github.com/HongryeolSeong/StudyC21/blob/main/img/res1.png "2차원배열")   
+<br>
+
+* 파일에 저장된 데이터 읽기
