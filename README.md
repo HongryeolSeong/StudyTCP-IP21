@@ -168,4 +168,31 @@ IPv4 : A(0 ~ 127), B(128 ~ 191), C(192 ~ 223), D(224 ~ 239), E(240 ~ 255)
 ##### PORT
 컴퓨터간 통신으로 받은 데이터를 최종 목적지인 응용프로그램에 주기 위한 주소   
 -> 컴퓨터는 NIC(Network Interface Card)로 IP를 통해 들어온 정보를 컴퓨터 내부로 전송하고,   
--> 내부로 전송된 정보에는 PORT번호가 있어 OS는 이 번호를 바탕으로 응용프로그램의 PORT소켓에 전달한다.   
+-> 내부로 전송된 정보의 PORT번호를 바탕으로 응용프로그램의 PORT소켓에 전달한다.   
+<br>
+
+##### 결론 : 데이터의 목적지 주소에는 IP뿐만아니라 PORT번호까지 있어야 응용프로그램까지 전달이 가능하다.
+<br>
+
+##### 주소정보의 표현
+주소표현을 위한 구조체가 정의되어있으며, 이를 통해 주소 정보를 전달하게 된다.   
+<br>
+
+##### 네트워크 바이트 순서와 인터넷 주소 변환
+cpu가 데이터를 메모리에 저장하는 방식은 두 가지   
+1. Big Endian : 낮은 번지 부터 높은 자리 숫자 들어감
+2. Little Endian : 낮은 번지 부터 낮은 자리 숫자 들어감   
+<br>
+
+Big Endian 시스템에서 0x1234 전송 -> Little Endian 시스템에서는 0x1234를 받지만 0x3412로 해석한다.   
+-> Big Endian방식으로 네트워크 바이트 순서가 통일됨.   
+-> Little Endian 시스템과 통신을 위해선 한 번의 Big Endian 정렬이 필요하게 된다.   
+<br>
+
+해당 코드🎮
+[endian_conv.c](https://github.com/HongryeolSeong/StudyTCP-IP21/blob/main/0611/endian_conv.c)   
+![결과9](https://github.com/HongryeolSeong/StudyC21/blob/main/img/res1.png "2차원배열")   
+실행 컴퓨터가 Little Endian으로 정렬하는 cpu를 가지고 있으므로 위와 같이 나온다.   
+만약 Big Endian cpu로 처리했다면 전후변화가 없는 결과가 출력될 것이다.   
+<br>
+<br>
