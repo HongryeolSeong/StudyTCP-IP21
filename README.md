@@ -19,7 +19,9 @@ socket() -> connect(): 서버 소켓으로의 연결 요청
 
 해당 코드🎮
 [server.c](https://github.com/HongryeolSeong/StudyTCP-IP21/blob/main/0611/hello_server.c)   [client.c](https://github.com/HongryeolSeong/StudyTCP-IP21/blob/main/0611/hello_client.c)   
-![결과9](https://github.com/HongryeolSeong/StudyC21/blob/main/img/res1.png "2차원배열")   
+![결과1](https://github.com/HongryeolSeong/StudyTCP-IP21/blob/main/0611/refimg/0611_1.png)   
+![결과2](https://github.com/HongryeolSeong/StudyTCP-IP21/blob/main/0611/refimg/0611_2.png)   
+<br>
 <br>
 <br>
 
@@ -61,7 +63,7 @@ ssize_t write(int fd, const void* buf, size_t nbytes);
 
 해당 코드🎮
 [low_open.c](https://github.com/HongryeolSeong/StudyTCP-IP21/blob/main/0611/low_open.c)   
-![결과9](https://github.com/HongryeolSeong/StudyC21/blob/main/img/res1.png "2차원배열")   
+![결과3](https://github.com/HongryeolSeong/StudyTCP-IP21/blob/main/0611/refimg/0611_3.png)   
 <br>
 
 ##### 파일에 저장된 데이터 읽기
@@ -75,13 +77,13 @@ ssize_t read(int fd, void* buf, size_t nbytes);
 
 해당 코드🎮
 [low_read.c](https://github.com/HongryeolSeong/StudyTCP-IP21/blob/main/0611/low_read.c)   
-![결과9](https://github.com/HongryeolSeong/StudyC21/blob/main/img/res1.png "2차원배열")   
+![결과4](https://github.com/HongryeolSeong/StudyTCP-IP21/blob/main/0611/refimg/0611_4.png)   
 <br>
 
 ##### 파일 디스크립터와 소켓   
 해당 코드🎮
 [fd_seri.c](https://github.com/HongryeolSeong/StudyTCP-IP21/blob/main/0611/fd_seri.c)   
-![결과9](https://github.com/HongryeolSeong/StudyC21/blob/main/img/res1.png "2차원배열")   
+![결과5](https://github.com/HongryeolSeong/StudyTCP-IP21/blob/main/0611/refimg/0611_5.png)   
 파일 디스크립터는 0,1,2 이후의 숫자로 순서대로 넘버링 되는 것을 볼 수 있다.   
 <br>
 <br>
@@ -111,7 +113,8 @@ int WSAStartup(WORD wVersionRequested, LPWSADATA lpWSAData);
 ##### 리눅스 서버 + 윈도우 클라이언트
 해당 코드🎮
 [server.c](https://github.com/HongryeolSeong/StudyTCP-IP21/blob/main/0611/hello_server.c)  [client_win.c](https://github.com/HongryeolSeong/StudyTCP-IP21/blob/main/0611/hello_client_win.c)   
-![결과9](https://github.com/HongryeolSeong/StudyC21/blob/main/img/res1.png "2차원배열")   
+![결과6](https://github.com/HongryeolSeong/StudyTCP-IP21/blob/main/0611/refimg/0611_6.png)   
+![결과7](https://github.com/HongryeolSeong/StudyTCP-IP21/blob/main/0611/refimg/0611_7.png)   
 리눅스 서버는 우분투 OS에서, 윈도우 클라이언트는 윈도우 OS cmd를 통해 구동했다.   
 <br>
 <br>
@@ -155,7 +158,7 @@ TCP의 데이터 경계x 특성을 확인하고자 한다. -> write()와 reade()
 
 해당 코드🎮
 [server.c](https://github.com/HongryeolSeong/StudyTCP-IP21/blob/main/0611/hello_server.c)  [tcp_client.c](https://github.com/HongryeolSeong/StudyTCP-IP21/blob/main/0611/tcp_client.c)   
-![결과9](https://github.com/HongryeolSeong/StudyC21/blob/main/img/res1.png "2차원배열")   
+![결과8](https://github.com/HongryeolSeong/StudyTCP-IP21/blob/main/0611/refimg/0611_8.png)   
 기존의 server + read()호출 횟수를 바꾼 client.c   
 <br>
 <br>
@@ -192,7 +195,7 @@ Big Endian 시스템에서 0x1234 전송 -> Little Endian 시스템에서는 0x1
 
 해당 코드🎮
 [endian_conv.c](https://github.com/HongryeolSeong/StudyTCP-IP21/blob/main/0611/endian_conv.c)   
-![결과9](https://github.com/HongryeolSeong/StudyC21/blob/main/img/res1.png "2차원배열")   
+![결과9](https://github.com/HongryeolSeong/StudyTCP-IP21/blob/main/0611/refimg/0611_9.png)   
 실행 컴퓨터가 Little Endian으로 정렬하는 cpu를 가지고 있으므로 위와 같이 나온다.   
 만약 Big Endian cpu로 처리했다면 전후변화가 없는 결과가 출력될 것이다.   
 <br>
