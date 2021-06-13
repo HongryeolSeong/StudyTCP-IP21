@@ -102,7 +102,7 @@ ssize_t read(int fd, void* buf, size_t nbytes);
 <br>
 
 ##### winsock의 초기화
-윈속 프로그래밍시 반드시 WSAStartup()을 통해 프로그램 요구 윈도우 소켓의 버전을 알리고, 해당 버전 지원 라이브러리의 초기화를 진행해야 한다.   
+winsock 프로그래밍시 반드시 WSAStartup()을 통해 프로그램 요구 윈도우 소켓의 버전을 알리고, 해당 버전 지원 라이브러리의 초기화를 진행해야 한다.   
 ```C
 #include <winsock2.h>
          //wVersionRequested: 윈속 버전 정보
