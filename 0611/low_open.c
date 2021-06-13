@@ -4,7 +4,7 @@
 #include <fcntl.h>
 #include <unistd.h>
 void error_handling(char* message);
-คำ
+
 int main(void)
 {
 	int fd;
