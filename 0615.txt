@@ -1,0 +1,98 @@
+// UDP 송수신 특성
+TCP와 다르게 데이터의 경계가 있으므로
+입력함수 호출횟수 == 출력함수 횟수이어야 한다
+
+ex bound_host1.c + ex bound_host2.c
+3번의 recvfrom(), 3번의 sendto()
+
+// connected UDP 소켓
+TCP와 다르게 목적지의 IP와 PORT번호를 따로 등록하지 않는다.
+-> sendto()가 주소등록 - 데이터 전송 - 목적지 정보 삭제를 반복 수행 한다.
+-> 반복횟수가 많아지면 비효율적
+-> UDP소켓을 connected 소켓으로 만든다.
+
+ex uecho_server.c + ex uecho_con_client.c
+
+// TCP의 종료
+아름다운 종료를 위해 반만 종료(Half-close)를 한다.
+송신/수신 과정 중 한 스트림만 필요한 경우를 위해.
+
+출력 스트림 종료시 상대 호스트로 EOF가 전송하여 전송의 끝을 알린다.
+
+ex file_server.c + ex file_client.c
+
+// Domain Name System
+기억하기 어려운 서버의 IP 대신 DNS를 통해 접속
+
+// 도메인 이름으로 IP주소 얻어오기
+ex gethostbyname.c
+
+// IP주소 -> 도메인
+ex gethostbyaddr.c
+
+// 소켓의 다양한 옵션
+SO_TYPE
+ex sock_type.c
+
+사이즈 확인 getsockopt()
+소켓 타입은 한번 결정되면 변경 불가능
+
+// 버퍼의 사이즈
+소켓 생성시 기본적으로 입출력 버퍼가 생성된다.
+
+SO_SNDBUF
+ex get_buf.c
+
+사이즈 변경시 setsockopt()
+ex set_buf.c
+
+// 주소할당 에러 발생
+ex reuseadr_eserver.c + ex echo_client.c
+
+1. 서버 실행 후 클라이언트로 접속
+2. 서버 먼저 끊고 클라이언트 종료
+3. 같은 포트로 서버 다시 실행시 bind() 오류
+4. 약 3분 후 서버 실행시 정상 실행
+
+-> 클라이언트가 먼저 종료시 오류x
+--> FIN메세지를 누가 먼저 전송했는지의 차이
+
+위와 같은 상황은 서버가 Time-wait 상태에 있기 때문에 발생
+
+ex reuseadr_eserver.c에 주석 부분 추가시 곧바로 주소 할당 가능
+ex reuseadr_eserver.c + 주석 코드
+
+// Nagle 알고리즘
+앞서 전송한 데이터에 대한 ACK를 받아야만 다음 데이터를 전송하는 알고리즘
+
+// 프로세스
+메모리 공간을 차지한 상태에서 실행중인 프로그램
+
+현재 실행중인 프로세스 확인
+>>> ps au
+
+// 프로세스 생성
+fork() 사용
+ex fork.c
+--> 코드속 gval와 lval는 부모와 자식 각각 따로 할당 된다.
+
+// 좀비 프로세스
+ex zombie.c 실행 후
+>>> ps au 하여 zombie 확인
++ 후면 처리로 해당 콘솔에서 바로 확인 가능
+
+// 좀비 소멸1
+wait() 사용
+ex wait.c
+--> but 블로킹 상태에 놓일 수 있다.
+
+// 좀비 소멸2
+waitpid() 사용
+ex waitpid.c
+
+// 시그널 핸들링
+인터럽트 컨트롤을 위한 작업
+ex signal.c
+
+구형인 signal()을 대체한 sigaction()
+ex sigactioin.c

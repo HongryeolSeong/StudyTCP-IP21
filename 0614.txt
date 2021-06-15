@@ -30,14 +30,14 @@ ex hello_server.c 리뷰
 // TCP기반 클아이언트
 socket - connect - read/write - close
 
-connect() 호출시 자동으로 소켓에 IP, PORT가 할당되므로 bin()가 필요없다
+connect() 호출시 자동으로 소켓에 IP, PORT가 할당되므로 bind()가 필요없다
 
 ex hello_client.c 리뷰
 
 // lterative 서버
 여러 클라이언트에 서비스를 제공 가능한 서버
 -> 지금 수준으로는 반복문을 통해 한 순간에 한 클라이언트를 처리 가능
--> 후에 프로세스와 스레드 학습시 동시에 둘 이사의 클라이언트와 대화 가능
+-> 후에 프로세스와 스레드 학습시 동시에 둘 이상의 클라이언트와 대화 가능
 
 에코 서버: 클라이언트가 전송하는 문자열을 그대로 클아이언트에 재전송한다.
 
@@ -79,3 +79,5 @@ TCP에 비해 안전성↓, 속도↑
 
 에코 서버/클라이언트
 ex uecho_server.c + ex uecho_client.c
+
+방화벽 및 vmnetcfg에서 UDP포트 19099 및 9099 추가할 것
