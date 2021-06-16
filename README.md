@@ -206,6 +206,7 @@ Big Endian 시스템에서 0x1234 전송 -> Little Endian 시스템에서는 0x1
 ## 주소 초기화 및 할당🎯
 ##### IP주소 문자열 -> 바이트 순서 정수로 변환
 inet_addr()사용한 변환   
+해당 코드🎮
 [inet_addr.c](https://github.com/HongryeolSeong/StudyTCP-IP21/blob/main/0614/1_inet_addr.c)   
 ![결과10](https://github.com/HongryeolSeong/StudyTCP-IP21/blob/main/0614/refimg/1.png)   
 ![결과11](https://github.com/HongryeolSeong/StudyTCP-IP21/blob/main/0614/refimg/2.png)   
