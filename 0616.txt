@@ -35,7 +35,7 @@ select() 함수
 ex select.c
 
 select()를 활용한 서버
-ex echo_selecterv.c + ex echo_eclient.c
+ex echo_selectserv.c + ex echo_eclient.c
 
 // 쓰레드 등장 배경
 멀티프로세스의 경우 컨텍스트 스위칭이 CPU에 많은 부담을 주게된다.
