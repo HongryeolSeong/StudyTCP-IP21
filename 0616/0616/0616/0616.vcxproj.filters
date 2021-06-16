@@ -15,34 +15,46 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="1_inet_addr.c">
+    <ClCompile Include="1_remove_zombie.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="2_inet_aton.c">
+    <ClCompile Include="2_echo_mpserv.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="3_echo_server.c">
+    <ClCompile Include="3_echo_client.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="4_echo_client.c">
+    <ClCompile Include="4_echo_mpclient.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="5_echo_client2.c">
+    <ClCompile Include="5_pipe1.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="6_op_server.c">
+    <ClCompile Include="6_pipe2.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="7_op_client.c">
+    <ClCompile Include="7_pipe3.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="8_uecho_server.c">
+    <ClCompile Include="8_echo_storeserv.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="9_uecho_client.c">
+    <ClCompile Include="9_select.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="2_inet_ntoa.c">
+    <ClCompile Include="10_echo_selectserv.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="11_thread1.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="12_thread2.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="13_thread3.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="14_thread4.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

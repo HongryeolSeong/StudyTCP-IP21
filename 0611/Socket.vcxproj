@@ -19,14 +19,14 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="endian_conv.c" />
-    <ClCompile Include="fd_seri.c" />
-    <ClCompile Include="hello_client.c" />
-    <ClCompile Include="hello_client_win.c" />
-    <ClCompile Include="hello_server.c" />
-    <ClCompile Include="low_open.c" />
-    <ClCompile Include="low_read.c" />
-    <ClCompile Include="tcp_client.c" />
+    <ClCompile Include="8_endian_conv.c" />
+    <ClCompile Include="5_fd_seri.c" />
+    <ClCompile Include="2_hello_client.c" />
+    <ClCompile Include="6_hello_client_win.c" />
+    <ClCompile Include="1_hello_server.c" />
+    <ClCompile Include="3_low_open.c" />
+    <ClCompile Include="4_low_read.c" />
+    <ClCompile Include="7_tcp_client.c" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

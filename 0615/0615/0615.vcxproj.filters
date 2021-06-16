@@ -15,34 +15,61 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="1_inet_addr.c">
+    <ClCompile Include="1_bound_host1.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="2_inet_aton.c">
+    <ClCompile Include="2_bound_host2.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="3_echo_server.c">
+    <ClCompile Include="3_uecho_server.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="4_echo_client.c">
+    <ClCompile Include="4_uecho_con_client.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="5_echo_client2.c">
+    <ClCompile Include="5_file_server.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="6_op_server.c">
+    <ClCompile Include="6_file_client.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="7_op_client.c">
+    <ClCompile Include="7_gethostbyname.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="8_uecho_server.c">
+    <ClCompile Include="8_gethostbyaddr.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="9_uecho_client.c">
+    <ClCompile Include="9_sock_type.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="2_inet_ntoa.c">
+    <ClCompile Include="10_get_buf.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="11_set_buf.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="12_reuseadr_eserver.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="13_echo_client.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="14_fork.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="15_zombie.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="16_wait.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="17_waitpid.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="18_signal.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="19_sigactioin.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

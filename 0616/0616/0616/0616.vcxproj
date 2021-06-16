@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{7010c6c3-780a-41d2-acfd-0ea8a471562d}</ProjectGuid>
-    <RootNamespace>My0614</RootNamespace>
+    <ProjectGuid>{57458693-0834-437a-8e67-f0b5c78854ca}</ProjectGuid>
+    <RootNamespace>My0616</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -139,16 +139,20 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="1_inet_addr.c" />
-    <ClCompile Include="2_inet_aton.c" />
-    <ClCompile Include="2_inet_ntoa.c" />
-    <ClCompile Include="3_echo_server.c" />
-    <ClCompile Include="4_echo_client.c" />
-    <ClCompile Include="5_echo_client2.c" />
-    <ClCompile Include="6_op_server.c" />
-    <ClCompile Include="7_op_client.c" />
-    <ClCompile Include="8_uecho_server.c" />
-    <ClCompile Include="9_uecho_client.c" />
+    <ClCompile Include="10_echo_selectserv.c" />
+    <ClCompile Include="11_thread1.c" />
+    <ClCompile Include="12_thread2.c" />
+    <ClCompile Include="13_thread3.c" />
+    <ClCompile Include="14_thread4.c" />
+    <ClCompile Include="1_remove_zombie.c" />
+    <ClCompile Include="2_echo_mpserv.c" />
+    <ClCompile Include="3_echo_client.c" />
+    <ClCompile Include="4_echo_mpclient.c" />
+    <ClCompile Include="5_pipe1.c" />
+    <ClCompile Include="6_pipe2.c" />
+    <ClCompile Include="7_pipe3.c" />
+    <ClCompile Include="8_echo_storeserv.c" />
+    <ClCompile Include="9_select.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
