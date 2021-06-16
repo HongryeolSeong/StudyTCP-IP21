@@ -18,7 +18,7 @@ socket() -> connect(): 서버 소켓으로의 연결 요청
 <br>
 
 해당 코드🎮
-[server.c](https://github.com/HongryeolSeong/StudyTCP-IP21/blob/main/0611/hello_server.c)   [client.c](https://github.com/HongryeolSeong/StudyTCP-IP21/blob/main/0611/hello_client.c)   
+[server.c](https://github.com/HongryeolSeong/StudyTCP-IP21/blob/main/0611/1_hello_server.c)   [client.c](https://github.com/HongryeolSeong/StudyTCP-IP21/blob/main/0611/2_hello_client.c)   
 ![결과1](https://github.com/HongryeolSeong/StudyTCP-IP21/blob/main/0611/refimg/0611_1.png)   
 ![결과2](https://github.com/HongryeolSeong/StudyTCP-IP21/blob/main/0611/refimg/0611_2.png)   
 <br>
@@ -42,7 +42,7 @@ VMware + Ubuntu를 설치하여 환경 구성.
          //path: 파일 이름 문자열의 주소 값
 int open(const char* path, int flag);
                      //flag: 파일의 오픈 모드 정보
-```
+``` 
 <br>
 
 2. 파일 닫기   
@@ -62,7 +62,7 @@ ssize_t write(int fd, const void* buf, size_t nbytes);
 ```   
 
 해당 코드🎮
-[low_open.c](https://github.com/HongryeolSeong/StudyTCP-IP21/blob/main/0611/low_open.c)   
+[low_open.c](https://github.com/HongryeolSeong/StudyTCP-IP21/blob/main/0611/3_low_open.c)   
 ![결과3](https://github.com/HongryeolSeong/StudyTCP-IP21/blob/main/0611/refimg/0611_3.png)   
 <br>
 
@@ -76,13 +76,13 @@ ssize_t read(int fd, void* buf, size_t nbytes);
 ```   
 
 해당 코드🎮
-[low_read.c](https://github.com/HongryeolSeong/StudyTCP-IP21/blob/main/0611/low_read.c)   
+[low_read.c](https://github.com/HongryeolSeong/StudyTCP-IP21/blob/main/0611/4_low_read.c)   
 ![결과4](https://github.com/HongryeolSeong/StudyTCP-IP21/blob/main/0611/refimg/0611_4.png)   
 <br>
 
 ##### 파일 디스크립터와 소켓   
 해당 코드🎮
-[fd_seri.c](https://github.com/HongryeolSeong/StudyTCP-IP21/blob/main/0611/fd_seri.c)   
+[fd_seri.c](https://github.com/HongryeolSeong/StudyTCP-IP21/blob/main/0611/5_fd_seri.c)   
 ![결과5](https://github.com/HongryeolSeong/StudyTCP-IP21/blob/main/0611/refimg/0611_5.png)   
 파일 디스크립터는 0,1,2 이후의 숫자로 순서대로 넘버링 되는 것을 볼 수 있다.   
 <br>
@@ -112,7 +112,7 @@ int WSAStartup(WORD wVersionRequested, LPWSADATA lpWSAData);
 
 ##### 리눅스 서버 + 윈도우 클라이언트
 해당 코드🎮
-[server.c](https://github.com/HongryeolSeong/StudyTCP-IP21/blob/main/0611/hello_server.c)  [client_win.c](https://github.com/HongryeolSeong/StudyTCP-IP21/blob/main/0611/hello_client_win.c)   
+[server.c](https://github.com/HongryeolSeong/StudyTCP-IP21/blob/main/0611/1_hello_server.c)  [client_win.c](https://github.com/HongryeolSeong/StudyTCP-IP21/blob/main/0611/6_hello_client_win.c)   
 ![결과6](https://github.com/HongryeolSeong/StudyTCP-IP21/blob/main/0611/refimg/0611_6.png)   
 ![결과7](https://github.com/HongryeolSeong/StudyTCP-IP21/blob/main/0611/refimg/0611_7.png)   
 리눅스 서버는 우분투 OS에서, 윈도우 클라이언트는 윈도우 OS cmd를 통해 구동했다.   
@@ -159,13 +159,13 @@ TCP의 데이터 경계x 특성을 확인하고자 한다. -> write()와 reade()
 <br>
 
 해당 코드🎮
-[server.c](https://github.com/HongryeolSeong/StudyTCP-IP21/blob/main/0611/hello_server.c)  [tcp_client.c](https://github.com/HongryeolSeong/StudyTCP-IP21/blob/main/0611/tcp_client.c)   
+[server.c](https://github.com/HongryeolSeong/StudyTCP-IP21/blob/main/0611/1_hello_server.c)  [tcp_client.c](https://github.com/HongryeolSeong/StudyTCP-IP21/blob/main/0611/7_tcp_client.c)   
 ![결과8](https://github.com/HongryeolSeong/StudyTCP-IP21/blob/main/0611/refimg/0611_8.png)   
 기존의 server + read()호출 횟수를 바꾼 client.c   
 <br>
 <br>
 
-## 주소체계🎯
+## 주소 체계🎯
 ##### IP
 컴퓨터간 통신을 위한 주소
 IPv4 : A(0 ~ 127), B(128 ~ 191), C(192 ~ 223), D(224 ~ 239), E(240 ~ 255)   
@@ -196,9 +196,19 @@ Big Endian 시스템에서 0x1234 전송 -> Little Endian 시스템에서는 0x1
 <br>
 
 해당 코드🎮
-[endian_conv.c](https://github.com/HongryeolSeong/StudyTCP-IP21/blob/main/0611/endian_conv.c)   
+[endian_conv.c](https://github.com/HongryeolSeong/StudyTCP-IP21/blob/main/0611/8_endian_conv.c)   
 ![결과9](https://github.com/HongryeolSeong/StudyTCP-IP21/blob/main/0611/refimg/0611_9.png)   
 실행 컴퓨터가 Little Endian으로 정렬하는 cpu를 가지고 있으므로 위와 같이 나온다.   
 만약 Big Endian cpu로 처리했다면 전후변화가 없는 결과가 출력될 것이다.   
 <br>
 <br>
+
+## 주소 초기화 및 할당🎯
+##### IP주소 문자열 -> 바이트 순서 정수로 변환
+inet_addr()사용한 변환   
+[inet_addr.c](https://github.com/HongryeolSeong/StudyTCP-IP21/blob/main/0614/1_inet_addr.c)   
+![결과10](https://github.com/HongryeolSeong/StudyTCP-IP21/blob/main/0614/refimg/1.png)   
+![결과11](https://github.com/HongryeolSeong/StudyTCP-IP21/blob/main/0614/refimg/2.png)   
+addr2="1.2.3.256"은 주소 규칙을 넘어가므로 변환이 안됨을 볼 수 있다.   
+<br>
+
