@@ -23,7 +23,6 @@ socket() -> connect(): 서버 소켓으로의 연결 요청
 ![결과2](https://github.com/HongryeolSeong/StudyTCP-IP21/blob/main/0611/refimg/0611_2.png)   
 <br>
 <br>
-<br>
 
 ## 리눅스 기반 실행🎯
 VMware + Ubuntu를 설치하여 환경 구성.   
