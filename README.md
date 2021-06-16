@@ -229,4 +229,17 @@ inet_aton()의 반대 기능
 ![결과15](https://github.com/HongryeolSeong/StudyTCP-IP21/blob/main/0614/refimg/6.png)   
 <br>
 
+##### 상수를 통한 주소 정보 초기화
+```C
+addr.sin_addr.s_addr=htonl(INADDR_ANY);
+```
+<br>
+
+## TCP/IP계층🎯
+응용 - TCP(or UDP) - IP - LINK   
+<br>
+
+##### TCP 기반 서버
+socket - bind - listen - accept - read/write - close   
+<br>
 
