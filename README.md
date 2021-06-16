@@ -213,14 +213,16 @@ inet_addr()사용한 변환
 addr2="1.2.3.256"은 주소 규칙을 넘어가므로 변환이 안됨을 볼 수 있다.   
 <br>
 
-inet_addr() + 구조체 변수에 주소 저장 = inet_aton.c   
+##### inet_aton.c()   
+inet_addr() + 구조체 변수에 주소 저장   
 해당 코드🎮
 [inet_aton.c](https://github.com/HongryeolSeong/StudyTCP-IP21/blob/main/0614/2_inet_aton.c)   
 ![결과12](https://github.com/HongryeolSeong/StudyTCP-IP21/blob/main/0614/refimg/3.png)   
 ![결과13](https://github.com/HongryeolSeong/StudyTCP-IP21/blob/main/0614/refimg/4.png)   
 <br>
 
-inet_aton()의 반대 기능 = inet_ntoa()   
+##### inet_ntoa()   
+inet_aton()의 반대 기능   
 해당 코드🎮
 [inet_ntoa.c](https://github.com/HongryeolSeong/StudyTCP-IP21/blob/main/0614/2_inet_ntoa.c)   
 ![결과14](https://github.com/HongryeolSeong/StudyTCP-IP21/blob/main/0614/refimg/5.png)   
