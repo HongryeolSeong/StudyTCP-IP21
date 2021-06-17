@@ -1,0 +1,12 @@
+// 쓰레드의 문제점 해결
+동기화를 통해 접근순서에 의한 문제 해결
+
+뮤텍스
+ex mutext.c
+
+세마포어
+ex semaphore.c
+
+// 멀티쓰레드 기반의 다중접속 서버
+ex chat_server.c
+ex chat_client.c
