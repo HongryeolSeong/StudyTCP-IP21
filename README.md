@@ -120,7 +120,7 @@ int WSAStartup(WORD wVersionRequested, LPWSADATA lpWSAData);
 <br>
 
 ## 프로토콜🎯
-서로 데이터를 주고 받기(대화) 위해서 정희해 놓은 규약/약속   
+서로 데이터를 주고 받기(대화) 위해서 정의해 놓은 규약/약속   
 <br>
 
 ##### 소켓 생성 함수의 인자들
@@ -241,5 +241,12 @@ addr.sin_addr.s_addr=htonl(INADDR_ANY);
 
 ##### TCP 기반 서버
 socket - bind - listen - accept - read/write - close   
+해당 코드🎮
+[server.c](https://github.com/HongryeolSeong/StudyTCP-IP21/blob/main/0611/1_hello_server.c)   
 <br>
 
+##### TCP 기반 클라이언트
+socket - connect - read/write - close   
+해당 코드🎮
+[client.c](https://github.com/HongryeolSeong/StudyTCP-IP21/blob/main/0611/2_hello_client.c)   
+<br>
