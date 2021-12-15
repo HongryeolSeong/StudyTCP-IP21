@@ -120,7 +120,7 @@ int WSAStartup(WORD wVersionRequested, LPWSADATA lpWSAData);
 ```   
    
 winsock의 충분한 사용 뒤에 라이브러리를 해제하도록 한다.
-```
+```C
 int WSACleanup(void);
 ```
 <br>
