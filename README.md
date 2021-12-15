@@ -116,6 +116,7 @@ int WSAStartup(WORD wVersionRequested, LPWSADATA lpWSAData);
 // wVersionRequested는 버전 정보를 WORD 타입으로 담고있는데, 1.2 버전의 경우 0x0201이 된다.
 // 일일이 바이트 단위로 쪼개서 버전 정보를 작성하는 것이 번거로우니 다음 함수를 사용한다.
 // MAKEWORD(1, 2); -> 주 버전 1, 부 버전 2, 0x0201 반환
+// int WSAStartup(MAKEWORD(1, 2), &wsaData) != 0) { ... }
 ```   
 <br>
 
