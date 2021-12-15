@@ -99,7 +99,7 @@ ssize_t read(int fd, void* buf, size_t nbytes);
 클아이언트 프로그램의 경우 윈도우 기반 개발이 대부분이다.   
 <br>
 
-##### indow 기반 개발 시
+##### Window 기반 개발 시
 1. 리눅스 기반 소켓 함수와 차이(함수 인수의 자료형)가 조금 있음을 알 것
 2. winsock2.h 헤더 파일을 포함 할 것
 3. ws2_32.lib 라이브러리를 링크시킬 것
@@ -123,6 +123,9 @@ winsock의 충분한 사용 뒤에 라이브러리를 해제하도록 한다.
 ```C
 int WSACleanup(void);
 ```
+해당 코드🎮
+[server.c](https://github.com/HongryeolSeong/StudyTCP-IP21/blob/main/0611/1_hello_server_win.c)  [client_win.c](https://github.com/HongryeolSeong/StudyTCP-IP21/blob/main/0611/6_hello_client_win.c)   
+![윈도우 결과](https://github.com/HongryeolSeong/StudyTCP-IP21/blob/main/0611/refimg/0611_10.png)   
 <br>
 
 ##### 리눅스 서버 + 윈도우 클라이언트
