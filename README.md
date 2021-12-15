@@ -133,7 +133,7 @@ int WSACleanup(void);
 [server.c](https://github.com/HongryeolSeong/StudyTCP-IP21/blob/main/0611/1_hello_server.c)  [client_win.c](https://github.com/HongryeolSeong/StudyTCP-IP21/blob/main/0611/6_hello_client_win.c)   
 ![결과6](https://github.com/HongryeolSeong/StudyTCP-IP21/blob/main/0611/refimg/0611_6.png)   
 ![결과7](https://github.com/HongryeolSeong/StudyTCP-IP21/blob/main/0611/refimg/0611_7.png)   
-리눅스 서버는 우분투 OS에서, 윈도우 클라이언트는 윈도우 OS cmd를 통해 구동했다.   
+리눅스 서버는 우분투 OS에서, 윈도우 클라이언트는 윈도우 OS cmd를 통해 실행하였다.   
 <br>
 <br>
 
