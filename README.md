@@ -124,7 +124,7 @@ winsock의 충분한 사용 뒤에 라이브러리를 해제하도록 한다.
 int WSACleanup(void);
 ```
 해당 코드🎮
-[server.c](https://github.com/HongryeolSeong/StudyTCP-IP21/blob/main/0611/1_hello_server_win.c)  [client_win.c](https://github.com/HongryeolSeong/StudyTCP-IP21/blob/main/0611/6_hello_client_win.c)   
+[server.c](https://github.com/HongryeolSeong/StudyTCP-IP21/blob/main/0611/hello_server_win.c)  [client_win.c](https://github.com/HongryeolSeong/StudyTCP-IP21/blob/main/0611/6_hello_client_win.c)   
 ![윈도우 결과](https://github.com/HongryeolSeong/StudyTCP-IP21/blob/main/0611/refimg/0611_10.png)   
 <br>
 
