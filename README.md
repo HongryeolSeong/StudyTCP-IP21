@@ -118,6 +118,11 @@ int WSAStartup(WORD wVersionRequested, LPWSADATA lpWSAData);
 // MAKEWORD(1, 2); -> 주 버전 1, 부 버전 2, 0x0201 반환
 // int WSAStartup(MAKEWORD(1, 2), &wsaData) != 0) { ... }
 ```   
+   
+winsock의 충분한 사용 뒤에 라이브러리를 해제하도록 한다.
+```
+int WSACleanup(void);
+```
 <br>
 
 ##### 리눅스 서버 + 윈도우 클라이언트
