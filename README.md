@@ -110,9 +110,12 @@ ssize_t read(int fd, void* buf, size_t nbytes);
 winsock 프로그래밍시 반드시 WSAStartup()을 통해 프로그램 요구 윈도우 소켓의 버전을 알리고, 해당 버전 지원 라이브러리의 초기화를 진행해야 한다.   
 ```C
 #include <winsock2.h>
-         //wVersionRequested: 윈속 버전 정보
+         //wVersionRequested: 윈도우소켓 버전 정보
 int WSAStartup(WORD wVersionRequested, LPWSADATA lpWSAData);
                                     //lpWSAData: WSADATA라는 구조체 변수의 주소 값
+// wVersionRequested는 버전 정보를 WORD 타입으로 담고있는데, 1.2 버전의 경우 0x0201이 된다.
+// 일일이 바이트 단위로 쪼개서 버전 정보를 작성하는 것이 번거로우니 다음 함수를 사용한다.
+// MAKEWORD(1, 2); -> 주 버전 1, 부 버전 2, 0x0201 반환
 ```   
 <br>
 
