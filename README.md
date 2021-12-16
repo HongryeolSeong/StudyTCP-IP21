@@ -17,6 +17,38 @@ socket(): 소켓 생성 -> bind(): 소켓에 IP와 포트 부여 -> listen(): �
 socket() -> connect(): 서버 소켓으로의 연결 요청   
 <br>
 
+##### 리눅스 서버 소켓 구현 함수
+```C
+#include <sys/socket.h>
+// 전화기 장만
+int socket(int domain, int type, int protocol);
+```
+```C
+// 전화번호 부여
+int bind(int sockfd, struct sockaddr *myaddr, socklen_t addrlen);
+```
+```C
+// 전화기의 케이블 연결
+int listen(int sockfd, int backlog);
+```
+```C
+// 수화기를 들어 올림
+int accept(int sockfd, struct sockaddr *addr, socklen_t *addrlen);
+```
+<br>
+
+
+##### 리눅스 클라이언트 소켓 구현 함수
+```C
+#include <sys/socket.h>
+// 전화기 장만
+int socket(int domain, int type, int protocol);
+```
+```C
+int connect(int sockfd, struct sockaddr *serv_addr, socklen_t addrlen);
+```
+<br>
+
 해당 코드🎮
 [server.c](https://github.com/HongryeolSeong/StudyTCP-IP21/blob/main/0611/1_hello_server.c)   [client.c](https://github.com/HongryeolSeong/StudyTCP-IP21/blob/main/0611/2_hello_client.c)   
 ![결과1](https://github.com/HongryeolSeong/StudyTCP-IP21/blob/main/0611/refimg/0611_1.png)   
