@@ -32,7 +32,7 @@ int bind(int sockfd, struct sockaddr *myaddr, socklen_t addrlen);
 int listen(int sockfd, int backlog);
 ```
 ```C
-// 수화기를 들어 올림
+// 수화기를 든다
 int accept(int sockfd, struct sockaddr *addr, socklen_t *addrlen);
 ```
 <br>
@@ -45,6 +45,7 @@ int accept(int sockfd, struct sockaddr *addr, socklen_t *addrlen);
 int socket(int domain, int type, int protocol);
 ```
 ```C
+// 전화를 건다
 int connect(int sockfd, struct sockaddr *serv_addr, socklen_t addrlen);
 ```
 <br>
