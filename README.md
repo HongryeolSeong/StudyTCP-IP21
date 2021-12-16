@@ -156,6 +156,30 @@ winsock의 충분한 사용 뒤에 라이브러리를 해제하도록 한다.
 ```C
 int WSACleanup(void);
 ```
+
+##### 윈도우 소켓 구현 함수
+```C
+#include <winsock2.h>
+SOCKET socket(int af, int type, int protocol);
+```
+```C
+int bind(SOCKET s, const struct sockaddr * name, int namelen);
+```
+```C
+int listen(SOCKET s, int backlog);
+```
+```C
+SOCKET accept(SOCKET s, struct sockaddr * addr, int * addrlen);
+```
+```C
+int connect(SOCKET s, const struct sockaddr * name, int namelen);
+```
+```C
+int closesocket(SOCKET s);
+```
+<br>
+
+##### 윈도우 기반 서버 및 클라이언트
 해당 코드🎮
 [server_win.c](https://github.com/HongryeolSeong/StudyTCP-IP21/blob/main/0611/hello_server_win.c)  [client_win.c](https://github.com/HongryeolSeong/StudyTCP-IP21/blob/main/0611/6_hello_client_win.c)   
 ![윈도우 결과](https://github.com/HongryeolSeong/StudyTCP-IP21/blob/main/0611/refimg/0611_10.png)   
