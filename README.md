@@ -208,7 +208,7 @@ int socket(int domain, int type, int protocol);
 
 ##### 프로토콜의 체계
 PF_INET(IPv4), PF_INET6(IPv6), PF_LOCAL(로컬), PF_PACKET(Low Level 소켓), PF_IPX(IPX 노벨)   
-등이 있지만 보편적으로 사용되는 PF_INET를 활용하여 학습한다.
+등이 있지만 보편적으로 사용되는 PF_INET을 기준으로 학습한다.
 <br>
 
 ##### 소켓의 타입
@@ -218,6 +218,7 @@ PF_INET(IPv4), PF_INET6(IPv6), PF_LOCAL(로컬), PF_PACKET(Low Level 소켓), PF
 - 전송 순서대로 데이터가 수신
 - 데이터의 경계x -> 총 3번의 write()를 통해 100바이트 전송했지만 수신 시 read()를 통해 한 번에 수신함(반대의 경우도 가능).   
 - 버퍼 다 차면 전송x -> 이 타입은 자신 그리고 연결된 소켓의 상태를 파악하며 송수신한다.
+- 소켓 대 소켓의 연결은 반드시 일대일이어야 한다.
 
 2. 비 연결지향형 소켓(SOCK_DGRAM)
 - 데이터 수신 순서는 전송 순서와 상관x
@@ -226,7 +227,7 @@ PF_INET(IPv4), PF_INET6(IPv6), PF_LOCAL(로컬), PF_PACKET(Low Level 소켓), PF
 - 연결x
 
 ##### 사용할 프로토콜
-한 체계안에 소켓 타입이 동일한 프로토콜이 둘 이상 존재하는 경우를 위해 필요한 정보   
+한 체계 안에 소켓 타입이 동일한 프로토콜이 둘 이상 존재하는 경우를 위해 필요한 정보.   
 소켓 생성 함수의 세번짜 인자로 들어간다.
 
 ##### 연결지향형 소켓 - TCP소켓
