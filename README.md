@@ -179,6 +179,23 @@ int closesocket(SOCKET s);
 ```
 <br>
 
+##### 윈도우 기반 입출력 함수
+리눅스와 다르게 윈도우는 파일 입출력 함수와 소켓 입출력 함수가 구분되어있다.
+```C
+int send(SOCKET s, const char * buf, int len, int flags);
+         //s: 데이터 전송 대상과의 연결을 의미하는 소켓의 핸들 값 전달.
+         //buf: 전송할 데이터를 저장하고 있는 버퍼의 주소 값 전달.
+         //len: 전송할 바이트 수 전달.
+         //flags: 데이터 전송 시 적용할 다양한 옵션 정보 전달.
+```
+```C
+int recv(SOCKET s, const char * buf, int len, int flags);
+         //s: 데이터 수신 대상과의 연결을 의미하는 소켓의 핸들 값 전달.
+         //buf: 수신된 데이터를 저장할 버퍼의 주소 값 전달.
+         //len: 수신할 수 있는 최대 바이트 수 전달.
+         //flags: 데이터 수신 시 적용할 다양한 옵션 정보 전달.
+```
+
 ##### 윈도우 기반 서버 및 클라이언트
 해당 코드🎮
 [server_win.c](https://github.com/HongryeolSeong/StudyTCP-IP21/blob/main/0611/hello_server_win.c)  [client_win.c](https://github.com/HongryeolSeong/StudyTCP-IP21/blob/main/0611/6_hello_client_win.c)   
