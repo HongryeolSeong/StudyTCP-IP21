@@ -129,7 +129,7 @@ ssize_t read(int fd, void* buf, size_t nbytes);
 
 ## 윈도우 기반 실행🎯
 상당수의 서버가 리눅스 기반으로 개발되는 동시에   
-클아이언트 프로그램의 경우 윈도우 기반 개발이 대부분이다.   
+클라이언트 프로그램의 경우 윈도우 기반 개발이 대부분이다.   
 <br>
 
 ##### Window 기반 개발 시
@@ -149,7 +149,7 @@ int WSAStartup(WORD wVersionRequested, LPWSADATA lpWSAData);
 // wVersionRequested는 버전 정보를 WORD 타입으로 담고있는데, 1.2 버전의 경우 0x0201이 된다.
 // 일일이 바이트 단위로 쪼개서 버전 정보를 작성하는 것이 번거로우니 다음 함수를 사용한다.
 // MAKEWORD(1, 2); -> 주 버전 1, 부 버전 2, 0x0201 반환
-// int WSAStartup(MAKEWORD(1, 2), &wsaData) != 0) { ... }
+// WSAStartup(MAKEWORD(1, 2), &wsaData)
 ```   
    
 winsock의 충분한 사용 뒤에 라이브러리를 해제하도록 한다.
